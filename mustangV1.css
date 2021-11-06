@@ -1,0 +1,17 @@
+button {
+	border-radius: 3px;
+    text-align: center;
+    padding: 25px;
+    
+    text-transform: uppercase;
+    width: 100px;
+    margin: 25px auto;
+    border: grey;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}
+p {
+	text-align: center;
+}
+
