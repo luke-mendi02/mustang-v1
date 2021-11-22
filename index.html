@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <!--
@@ -8,12 +9,13 @@
 -->
     <head>
         <meta charset="UTF-8">
-        <title>Mustang Lite</title>
+        <title>Mustang V2</title>
         <link rel="stylesheet" href="mustangV1.css">
         <script src="mustangV1.js"></script>
+        <!--<?php include 'mustang-v2.php';?>-->
     </head>
     <body onload="initApplication()"; style = background-color:whitesmoke>  
-        <h1 style = text-align:center;>Mustang v1.2</h1>         
+        <h1 style = text-align:center;>Mustang v2.3</h1>         
         <button onclick="loadIndex()">Load Index</button><br>
         <p>Index:</p><p id="indexID"></p>
 
@@ -22,5 +24,52 @@
         <p>Contacts:</p><p id="contactsID"></p>
 
         <button onclick="logContacts()">Log Contacts to Console</button><br>
+        <button onclick = "showContacts()">Show Contacts</button>
+        <p id = "contacts"></p>
+        <p>Try entering the zip code first to utilize autocomplete.</p>
+        <table class = "center">
+            <tr>
+                <td>Name:</td>
+                <td> 
+                    <input id="nameID" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input id="emailID" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td>
+                    <input id="cityID" type="text" value="" size="20">
+                </td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <input id="stateID" type="text" value="" size="20" onkeypress="keyPressed()">
+                </td>
+            </tr>
+            <tr>
+                <td>Zip</td>
+                <td>
+                    <input id="zipID" type="text" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="previous()">Previous</button></td>
+                <td><button type="button" autofocus onclick="next()">Next</button>
+                </td>
+            <tr>
+                <td><button type="button" onclick="add()">New</button></td>
+                <td><button type="button" onclick="remove()">Delete</button>
+            </td>
+            </tr>
+        </table>
+
+        <p id="statusID"></p>
+        <br><br><hr>
     </body>
 </html>
